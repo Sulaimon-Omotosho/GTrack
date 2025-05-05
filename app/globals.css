@@ -1,5 +1,5 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -41,6 +41,12 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  --color-susuSky: var(--susuSky);
+  --color-susuSkyLight: var(--susuSkyLight);
+  --color-susuPurple: var(--susuPurple);
+  --color-susuPurpleLight: var(--susuPurpleLight);
+  --color-susuYellow: var(--susuYellow);
+  --color-susuYellowLight: var(--susuYellowLight);
 }
 
 :root {
@@ -76,6 +82,12 @@
   --sidebar-accent-foreground: oklch(0.21 0.006 285.885);
   --sidebar-border: oklch(0.92 0.004 286.32);
   --sidebar-ring: oklch(0.705 0.015 286.067);
+  --susuSky: oklch(0.78 0.0814 222.88);
+  --susuSkyLight: oklch(0.88 0.0814 222.88 / 71.68%);
+  --susuPurple: oklch(0.61 0.1135 329.82);
+  --susuPurpleLight: oklch(0.61 0.1135 329.82 / 72%);
+  --susuYellow: oklch(0.95 0.1307 102.18);
+  --susuYellowLight: oklch(0.95 0.1307 102.18 / 72%);
 }
 
 .dark {
@@ -118,5 +130,26 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+
+  /* Remove scrollbar */
+  .remove-scrollbar::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+    border-radius: 0px;
+  }
+
+  .remove-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .remove-scrollbar::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 0px;
+  }
+
+  .remove-scrollbar::-webkit-scrollbar-thumb:hover {
+    /* background: #1e2238; */
+    background: transparent;
   }
 }
